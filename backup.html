@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Website</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #FFFFFF;
+            color: #708090;
+        }
+
+        header {
+            background-color: #4682B4;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            border: 3px solid #BCC6CC;
+            border-radius: 10px;
+        }
+
+        .intro-table {
+            width: 90%;
+            margin: 20px auto;
+            border-collapse: collapse;
+            background-color: white;
+            border: 3px solid #BCC6CC;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .intro-table td {
+            padding: 20px;
+        }
+
+        .intro-table .welcome-text {
+            vertical-align: middle;
+            padding-right: 20px;
+        }
+
+        .intro-table .profile-picture {
+            text-align: center;
+        }
+
+        .intro-table img {
+            width: 180px;
+            height: 290px;
+            border: 2px solid #BCC6CC;
+            border-radius: 10px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #87CEEB;
+            padding: 10px 0;
+            margin-top: 20px;
+            flex-wrap: wrap; /* Allow wrapping on smaller screens */
+        }
+
+        nav a {
+            margin: 5px;
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            text-align: center;
+            font-weight: bold;
+            background-color: #4682B4;
+            border-radius: 5px;
+        }
+
+        nav a:hover {
+            background-color: #98FB98;
+            color: #FFFFFF;
+        }
+
+        section {
+            padding: 20px;
+            margin: 20px auto;
+            width: 80%;
+            background-color: #FFFFFF;
+            border: 3px solid #BCC6CC;
+            border-radius: 10px;
+            display: none;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        section:target {
+            display: block;
+        }
+
+        section h2 {
+            color: #4682B4;
+            margin-bottom: 10px;
+        }
+
+        ul {
+            list-style-type: square;
+            padding-left: 20px;
+        }
+
+        button {
+            background-color: #87CEEB;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #98FB98;
+        }
+
+        .footer {
+            text-align: center;
+            background-color: #4682B4;
+            color: white;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            padding: 10px 0;
+            font-size: 14px;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .project-card {
+            border: 3px solid #BCC6CC;
+            border-radius: 10px;
+            padding: 15px;
+            background-color: #f9f9f9;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .project-card img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #BCC6CC;
+            border-radius: 5px;
+        }
+
+        .contact-form button {
+            background-color: #4682B4;
+            padding: 10px 20px;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+
+        .contact-form button:hover {
+            background-color: #98FB98;
+        }
+
+        .social-links a {
+            margin: 0 10px;
+            color: #4682B4;
+            text-decoration: none;
+        }
+
+        .social-links a:hover {
+            color: #87CEEB;
+        }
+
+        /* Media Query for Mobile Devices */
+        @media (max-width: 768px) {
+            nav a {
+                padding: 10px;
+                font-size: 14px;
+                margin: 5px;
+            }
+
+            .intro-table {
+                width: 100%;
+                margin: 10px;
+            }
+
+            .intro-table img {
+                width: 150px;
+                height: 230px;
+            }
+
+            .projects-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            section {
+                width: 90%;
+            }
+
+            footer {
+                font-size: 12px;
+                padding: 8px 0;
+            }
+        }
+
+        /* Media Query for Small Devices */
+        @media (max-width: 480px) {
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+
+            nav a {
+                font-size: 12px;
+                padding: 10px 15px;
+            }
+
+            .intro-table td {
+                padding: 10px;
+            }
+
+            .footer {
+                font-size: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Welcome!</h1>
+    <h3>Raghav Anil Bhise</h3>
+    <h5>Current Education: Computer Science Engineering</h5>
+</header>
+
+<table class="intro-table">
+    <tr>
+        <td class="welcome-text">
+            <h2>Welcome to My Website</h2>
+            <p>Welcome to my personal portfolio! I'm excited to have you here. This website showcases <br> my journey, achievements, and skills in various fields. Feel free to explore and learn more about me. I hope you enjoy your visit!</p>
+        </td>
+        <td class="profile-picture">
+            <img src="Profile_photo.jpg" alt="Profile Picture">
+        </td>
+    </tr>
+</table>
+
+<nav>
+    <a href="#about-me">About Me</a>
+    <a href="#certificates">Certificates</a>
+    <a href="#skills">Skills</a>
+    <a href="#education">Education</a>
+    <a href="#academic">Academic</a>
+    <a href="#projects">Projects</a>
+    <a href="#experience">Experience</a>
+    <a href="#contact">Contact</a>
+    <a href="#social">Social</a>
+</nav>
+
+<section id="about-me">
+    <h2>About Me</h2>
+    <p>Hello! I'm Raghav, a passionate Computer Science Engineering student with a deep interest in Artificial Intelligence and Machine Learning technologies. I am constantly exploring new areas within AI, always seeking to learn and apply cutting-edge concepts. Eager to make meaningful contributions, I aspire to work on impactful projects that drive innovation and shape the future of technology.</p>
+</section>
+
+<section id="certificates">
+    <h2>Certificates</h2>
+    <ul>
+        <li><b>Figma Bootcamp</b> - Let's Upgrade</li><br>
+        <li><b>Power BI Workshop</b> - Office Master</li><br>
+        <li><b>Programming with Python</b> - Internshala Trainings</li><br>
+        <li><b>AI Tools Workshop</b> - Be10x</li><br>
+        <li><b>Cyber Security</b> - Skill India Digital Hub</li><br>
+        <li><b>Introduction to Data Science</b> - Cisco Networking Academy</li><br>
+        <li><b>CCNA : Module 1</b> - Cisco Networking Academy</li><br>
+        <li><b>Microsoft Excel: Excel from Beginner to Advanced</b> - Udemy</li><br>
+        <li><b>Object Oriented Programming in Java</b> - Scaler</li><br>
+        <li><b>Practical C++ : Learn C++ Basics Step by Step</b> - Udemy</li><br>
+    </ul>
+</section>
+<section id="skills">
+    <h2>Skills</h2>
+    <ul>
+        <li> Java Programming</li><br>
+        <li> C++ Programming</li><br>
+        <li> Basic HTML/ CSS Programming</li><br>
+        <li> Computer Skills</li><br>
+        <li> Friendly, positive attitude</li><br>
+        <li> Planning</li><br>
+        <li> Team Quality Control</li><br>
+        <li> Motivation Technique</li><br>
+    </ul>
+</section>
+
+<section id="education">
+    <h2>Education</h2>
+    <ul>
+        <li>
+            <b>Vishwakarma Institute of Information Technology</b><br>
+            Computer Science and Engineering - Artificial Intelligence and Machine Learning<br>
+            Aug 2023 - Currently Pursuing
+        </li><br>
+        <li>
+            <b>SMT. Susheela Bahudhani Jr. College</b><br>
+            Higher Secondary Education, PCM + Computer Science<br>
+            Jun 2021 - Mar 2023
+        </li><br>
+        <li>
+            <b>Abhinav English School CBSE, Narhe</b><br>
+            Secondary Education<br>
+            Jun 2017 - Mar 2021
+        </li><br>
+        <li>
+            <b>Abhinav Education Society's English Medium School</b><br>
+            Pre Primary - Primary Education<br>
+            Jun 2009 - Mar 2017
+        </li><br>
+    </ul>
+</section>
+
+<section id="academic">
+    <h2>Academic</h2>
+    <table border="1" border-collapse=collapse cellpadding="1" cellspacing="1" width="600px">
+        <tr bgcolor="#87CEEB">
+            <th colspan="2">Standered</th>
+            <th colspan="2">marks</th>
+        </tr>
+        <tr>
+            <td colspan="2">10th</td>
+            <td colspan="2">83.4%</td>
+        </tr>
+        <tr>
+            <td colspan="2">12th</td>
+            <td colspan="2">60%</td>
+        </tr>
+        <tr><td colspan="4"></td></tr>
+        <tr >
+            <td colspan="2"></td>
+            <td><b>SGPA</b></td>
+            <td><b>CGPA</b></td>
+        </tr>
+        <tr>
+            <td>1<sup>st</sup> year</td>
+            <td>Semester 1</td>
+            <td>7.67</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>Semester 2</td>
+            <td>7.92</td>
+            <td>7.83</td>
+        </tr>
+        <tr>
+            <td>2<sup>nd</sup> Year</td>
+            <td>Semester 2</td>
+            <td>8.10</td>
+            <td>7.92</td>
+        </tr>
+    </table>
+</section>
+
+<section id="projects">
+    <h2>Projects</h2>
+    <div class="projects-grid">
+        <div class="project-card">
+            <h3>Fantasy Cricket</h3>
+            <p>A Fantasy Cricket Project involves creating a platform or application where users can form their own cricket teams
+               using real players, and earn points based on the real-life performance of those players in actual cricket matches.</p>
+            <a href="https://github.com/Raghav15042005/Fantasy-Cricket" target="_blank">View Project</a>
+        </div>
+    </div>
+</section>
+
+<section id="experience">
+    <h2>Experience</h2>
+    <p>Interned at XYZ Tech Solutions where I worked on full-stack development projects, gained hands-on experience with cloud technologies and contributed to AI-driven applications.</p>
+</section>
+
+<section id="contact">
+    <h2>Contact</h2>
+    <form class="contact-form">
+        <input type="text" placeholder="Name" required><br>
+        <input type="email" placeholder="Email" required><br>
+        <textarea placeholder="Message" rows="4" required></textarea><br>
+        <button type="submit">Send Message</button>
+    </form>
+</section>
+
+<section id="social">
+    <h2>Social Links</h2>
+    <div class="social-links">
+        <a href="https://github.com/Raghav15042005" target="_blank">GitHub</a>
+        <a href="https://www.linkedin.com/in/raghav-bhise-996b1a290/" target="_blank">LinkedIn</a>
+    </div>
+</section>
+
+<footer class="footer">
+    <p>Designed by Raghav Anil Bhise</p>
+</footer>
+
+</body>
+</html>
